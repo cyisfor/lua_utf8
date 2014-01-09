@@ -26,7 +26,7 @@ local function longEncode(codepoint)
         chars = string.char(derp) .. chars
         codepoint = bit32.rshift(codepoint,6)
         trailers = trailers + 1
-        topspace = topspace / 2
+        topspace = bit32.rshift(topspace,1)
     end
 
     -- is there a better way to make 0xFFFF0000 from 4 than lshift/rshift?
