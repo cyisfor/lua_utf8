@@ -1,0 +1,7 @@
+Usage:
+
+local utf8 = require('utf8')
+print(utf8.encode({27,0x3045,...}))
+for _,codepoint in ipairs(utf8.decode('yo hablo éspanol')) do
+    print(codepoint)
+end
